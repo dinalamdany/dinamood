@@ -19,6 +19,6 @@ def get_tweet(username)
 end
 
 get '/' do
-	get_tweet("kylehardgrave")
+  return get_tweet("kylehardgrave")
 end
 
