@@ -7,7 +7,7 @@ require 'net/http'
 
 def get_tweet(username)
   base_url = "http://api.twitter.com/1/users/show.json?screen_name=#{username}"
-  resp = Net::HTTP.get_response(URI.parse(url))
+  resp = Net::HTTP.get_response(URI.parse(base_url))
   data = resp.body
   result = JSON.parse(data)
 
@@ -21,3 +21,4 @@ end
 get '/' do
 	get_tweet("kylehardgrave")
 end
+
